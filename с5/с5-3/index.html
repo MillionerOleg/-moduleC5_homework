@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body{ 
+            background-color: rgb(252, 249, 237);
+            color: rgb(163, 163, 163);
+            font-weight: 500;
+        }
+        header {
+            background-color: #555;
+        }
+
+        nav {
+            background-color: rgb(112, 112, 112); 
+        }
+
+        nav li {
+            margin-top: 5px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        button {
+            font-size: 6ch;
+            font-weight: 900;
+            align-self: auto;
+            background-color: burlywood;
+            outline-color: black;
+        }
+
+        button:hover {
+            opacity: 0.8;
+            background-color: rgb(223, 177, 118);
+        }
+
+        #inpbtn {
+            font-size: 1.6ch;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="row">
+            <header class="col col-xl-12 text-xl-center">
+                <h1>Слайд-шоу</h1>
+            </header>
+        </div>
+            <div class="row">
+                <nav class="col col-xl-2 text-xl-left">
+                    <ui class="col align-content-around">
+                        <li>You get nothing!</li>
+                        <li>You lose!</li>
+                        <li>Good day sir!</li>
+                        <li>Exit</li>
+                    </ui>
+                </nav>
+                <main class="col col-xl-8 h-25">
+                    <button class="slide-button" id="lbtn"><</button>
+                    <img id="slid" src="#" alt="random" height="700" width="1062">
+                    <button id="rbtn" class="slide-button" accesskey="a">></button>
+                </main>
+                <aside class="col col-xl-2 text-xl-left">
+                    <input id="inp" type="text"  maxlength="2" placeholder="Количество картинок">
+                    <button id="inpbtn">Загрузить</button>
+                    <p id="process" class="d-none">В процессе...</p>
+                    <p id="numerror" class="d-none">Число вне диапазона от 1 до 10.</p>
+                </aside>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
